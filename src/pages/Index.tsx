@@ -1,0 +1,25 @@
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
+import SolutionsSection from "@/components/SolutionsSection";
+import SubsidySection from "@/components/SubsidySection";
+import WhyUsSection from "@/components/WhyUsSection";
+import FounderSection from "@/components/FounderSection";
+import Footer from "@/components/Footer";
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <HeroSection />
+      <ServicesSection />
+      <SolutionsSection />
+      <SubsidySection />
+      <WhyUsSection />
+      <FounderSection />
+      <Footer />
+    </div>
+  );
+};
+
+export default Index;

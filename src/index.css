@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 220 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 12%;
+
+    --primary: 220 60% 20%;
+    --primary-foreground: 40 100% 97%;
+
+    --secondary: 38 92% 50%;
+    --secondary-foreground: 220 60% 10%;
+
+    --muted: 40 15% 93%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 220 60% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 38 92% 50%;
+
+    --radius: 0.75rem;
+
+    --solar-glow: 38 100% 60%;
+    --solar-deep: 220 65% 15%;
+    --solar-sky: 200 60% 50%;
+    --solar-leaf: 145 50% 40%;
+    --solar-warm: 25 80% 55%;
+    --solar-surface: 40 25% 96%;
+
+    --gradient-solar: linear-gradient(135deg, hsl(38 92% 50%), hsl(25 80% 55%));
+    --gradient-hero: linear-gradient(160deg, hsl(220 65% 15%) 0%, hsl(220 50% 25%) 50%, hsl(200 60% 35%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 97%) 100%);
+
+    --shadow-solar: 0 4px 30px -5px hsl(38 92% 50% / 0.3);
+    --shadow-card: 0 8px 30px -12px hsl(220 30% 12% / 0.12);
+    --shadow-card-hover: 0 16px 40px -12px hsl(220 30% 12% / 0.2);
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 40 20% 95%;
+    --card: 220 30% 12%;
+    --card-foreground: 40 20% 95%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 40 20% 95%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 220 60% 10%;
+    --secondary: 220 40% 25%;
+    --secondary-foreground: 40 20% 95%;
+    --muted: 220 25% 18%;
+    --muted-foreground: 40 10% 60%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 220 60% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 38 92% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-gradient-solar {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-solar);
+  }
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-gradient-card {
+    background-image: var(--gradient-card);
+  }
+
+  .shadow-solar {
+    box-shadow: var(--shadow-solar);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .bg-solar-surface {
+    background-color: hsl(var(--solar-surface));
+  }
+}
