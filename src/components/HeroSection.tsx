@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-solar.jpg";
 
 const stats = [
-  { value: "100+", label: "Total Installations" },
-  { value: "1500+", label: "kW Installed" },
+  { value: "1000+", label: "Total Installations" },
+  { value: "15+", label: "MW Installed" },
 ];
 
 const HeroSection = () => {
